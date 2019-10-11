@@ -23,10 +23,27 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+solves the problem of passing props from child components of different trees, instead of passing only from parent to child components.
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+1. Actions are payloads of information that send data from your application to your store.
+2. The reducer is a pure function that takes the current state and an action, and returns the next state
+3. A redux store is a state container for reducer functions.
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state is global where any component in the app can access items in it e.g redux store, and component state is local, where items lives within that specific component.
+
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object. That function receives the store's dispatch method, which is then used to dispatch regular synchronous actions inside the body of the function once the asynchronous operations have completed
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+Redux is my favorite state management over contextApi because when wired correctly, it's easier to use and allows for more tweaking compared to contextApi
 
 ## Project Set Up
 
