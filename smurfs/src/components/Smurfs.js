@@ -14,7 +14,7 @@ export function Smurfs({ smurfsData, getSmurfsData }) {
   // const searchedData = search
   //   ? population.data.filter(item => search === item["ID Year"].toString())
   //   : population.data;
-
+  console.log(smurfsData);
   return (
     <div className="component">
       <h1>SMURFS</h1>

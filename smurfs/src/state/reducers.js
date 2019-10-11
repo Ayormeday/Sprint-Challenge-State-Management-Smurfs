@@ -1,6 +1,6 @@
 import * as types from "./actionTypes";
 
-const initialSmurfData = {};
+const initialSmurfData = [];
 
 export function smurfDataReducer(state = initialSmurfData, action) {
   switch (action.type) {
@@ -23,6 +23,11 @@ export function form(state = initialFormState, action) {
       return {
         ...state,
         items: action.payload
+      };
+      case types.ON_INPUT_CHANGE:
+      return {
+        ...state,
+        [action.payload.name]: action.payload.value
       };
     default:
       return state;

@@ -33,15 +33,12 @@ export function changeInput(target) {
   };
 }
 
-export const postFormData = () => dispatch => {
+export const postFormData = (data) => dispatch => {
   axios
-    .post(smurfsApi)
-    .then(smurfData =>
-      dispatch({
-        type: types.POST_SMURFS_DATA,
-        payload: smurfData
-      })
-    )
+    .post(smurfsApi, data)
+    .then(response => {
+      dispatch(setSmurfsData(response.data))
+    })
     .catch(error => {
       console.log(error);
     });
