@@ -26,3 +26,25 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-data {
+  padding: 10px
+
+}
+
+.form-data-mid {
+  margin-left: 20px;
+}
+
+#form-id {
+  margin-left: 5px;
+}
+#form-id-1 {
+  margin-left: 5px;
+}
